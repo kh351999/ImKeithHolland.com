@@ -10,13 +10,14 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #121212;
+            color: #fff;
         }
         header {
-            background: #222;
-            color: white;
+            background: #1f1f1f;
             padding: 20px;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
         }
         nav {
             margin: 20px 0;
@@ -24,25 +25,41 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
-            font-size: 18px;
+            color: #f4f4f4;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: #1f1f1f;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         }
         .socials a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             margin: 10px;
-            padding: 10px 15px;
-            background: #222;
-            color: white;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #000;
             border-radius: 5px;
             text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .socials a:hover {
+            background: #e6b800;
+        }
+        .socials img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -59,9 +76,15 @@
         <p>Website in Progress :)</p>
         
         <div class="socials">
-            <a href="https://instagram.com/ImKeithHolland">Instagram</a>
-            <a href="https://twitter.com/ImKeithHolland">Twitter</a>
-            <a href="https://youtube.com/ImKeithHolland">YouTube</a>
+            <a href="https://instagram.com/ImKeithHolland">
+                <img src="instagram-logo.png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://twitter.com/ImKeithHolland">
+                <img src="twitter-logo.png" alt="Twitter"> Twitter
+            </a>
+            <a href="https://youtube.com/ImKeithHolland">
+                <img src="youtube-logo.png" alt="YouTube"> YouTube
+            </a>
         </div>
     </div>
 </body>
