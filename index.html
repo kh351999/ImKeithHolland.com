@@ -26,13 +26,13 @@
             padding: 0 20px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
         }
 
         .headshot-container {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .headshot-container img {
@@ -42,15 +42,29 @@
             margin-right: 15px;
         }
 
-        .headshot-container h1 {
+        .name-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .name-info h1 {
             margin: 0;
+            font-size: 36px;
             font-family: 'Roboto', sans-serif;
-            font-size: 34px;
+        }
+
+        .name-info span {
+            font-size: 14px;
+            font-weight: 300;
+            color: #ccc;
+            margin-top: 4px;
         }
 
         .social-icons {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-top: 10px;
         }
 
@@ -107,14 +121,22 @@
 
             .social-icons {
                 margin-top: 15px;
-            }
-
-            .headshot-container {
+                flex-wrap: wrap;
                 justify-content: center;
             }
 
             .social-icons a {
-                margin: 0 10px;
+                margin: 10px;
+            }
+
+            .headshot-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .name-info {
+                align-items: center;
+                margin-top: 10px;
             }
         }
     </style>
@@ -124,12 +146,16 @@
         <div class="header-content">
             <div class="headshot-container">
                 <img src="headshot.png" alt="Keith Holland Headshot">
-                <h1>Keith Holland</h1>
+                <div class="name-info">
+                    <h1>Keith Holland</h1>
+                    <span>Digital Creator & Social Media Expert</span>
+                </div>
             </div>
             <div class="social-icons">
-                <a href="https://instagram.com/@ImKeithHolland" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                <a href="https://instagram.com/ImKeithHolland" target="_blank"><img src="instagram.png" alt="Instagram"></a>
                 <a href="https://tiktok.com/@ImKeithHolland" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
                 <a href="https://youtube.com/@ImKeithHolland" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+                <a href="https://snapchat.com/add/ImKeithHolland" target="_blank"><img src="snapchat.png" alt="Snapchat"></a>
             </div>
         </div>
     </header>
