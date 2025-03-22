@@ -13,53 +13,68 @@
             background-color: #ffffff;
             color: #222;
         }
+
         header {
             background: #222;
             color: white;
-            padding: 20px 40px;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
+
         .headshot-container {
             display: flex;
             align-items: center;
         }
+
         .headshot-container img {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             margin-right: 15px;
         }
+
         .headshot-container h1 {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            font-size: 28px;
+            font-size: 34px;
         }
+
         .social-icons {
             display: flex;
             align-items: center;
-            justify-content: center;
             margin-top: 10px;
         }
+
         .social-icons a {
             margin-left: 15px;
         }
+
         .social-icons img {
-            width: 36px;
-            height: 36px;
+            width: 48px;
+            height: 48px;
             border-radius: 10px;
             transition: transform 0.2s ease;
         }
+
         .social-icons img:hover {
             transform: scale(1.1);
         }
+
         nav {
             background: #f8f8f8;
             padding: 15px;
             text-align: center;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
@@ -67,6 +82,7 @@
             font-size: 18px;
             font-weight: 700;
         }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -76,32 +92,45 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         p {
             font-size: 18px;
             line-height: 1.6;
         }
 
         @media (max-width: 600px) {
-            header {
+            .header-content {
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
             }
+
             .social-icons {
                 margin-top: 15px;
+            }
+
+            .headshot-container {
+                justify-content: center;
+            }
+
+            .social-icons a {
+                margin: 0 10px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="headshot-container">
-            <img src="headshot.png" alt="Keith Holland Headshot">
-            <h1>Keith Holland</h1>
-        </div>
-        <div class="social-icons">
-            <a href="https://instagram.com/@ImKeithHolland" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://tiktok.com/@ImKeithHolland" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
-            <a href="https://youtube.com/@ImKeithHolland" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        <div class="header-content">
+            <div class="headshot-container">
+                <img src="headshot.png" alt="Keith Holland Headshot">
+                <h1>Keith Holland</h1>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com/@ImKeithHolland" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                <a href="https://tiktok.com/@ImKeithHolland" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+                <a href="https://youtube.com/@ImKeithHolland" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+            </div>
         </div>
     </header>
     
