@@ -16,27 +16,44 @@
         header {
             background: #222;
             color: white;
-            padding: 20px;
+            padding: 20px 40px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        .headshot {
+        .headshot-container {
             display: flex;
             align-items: center;
         }
-        .headshot img {
-            width: 60px;
-            height: 60px;
+        .headshot-container img {
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             margin-right: 15px;
         }
+        .headshot-container h1 {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 28px;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
         .social-icons a {
-            margin-left: 10px;
+            margin-left: 15px;
         }
         .social-icons img {
-            width: 24px;
-            height: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.1);
         }
         nav {
             background: #f8f8f8;
@@ -63,13 +80,23 @@
             font-size: 18px;
             line-height: 1.6;
         }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .social-icons {
+                margin-top: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="headshot">
+        <div class="headshot-container">
             <img src="headshot.png" alt="Keith Holland Headshot">
-            <h1 style="margin: 0; font-family: 'Roboto', sans-serif;">Keith Holland</h1>
+            <h1>Keith Holland</h1>
         </div>
         <div class="social-icons">
             <a href="https://instagram.com/@ImKeithHolland" target="_blank"><img src="instagram.png" alt="Instagram"></a>
