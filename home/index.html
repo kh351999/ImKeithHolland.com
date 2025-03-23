@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
       color: #222;
     }
 
@@ -97,6 +97,43 @@
       font-weight: 700;
     }
 
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      animation: scroll-bg 30s linear infinite;
+    }
+
+    .hero-foreground {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      height: 100%;
+    }
+
+    .hero-foreground img {
+      max-height: 90vh;
+      width: auto;
+    }
+
+    @keyframes scroll-bg {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    /* Info Section */
     .container {
       max-width: 800px;
       margin: 50px auto;
@@ -105,6 +142,8 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       text-align: center;
+      position: relative;
+      z-index: 3;
     }
 
     .container h2 {
@@ -142,6 +181,10 @@
         align-items: center;
         margin-top: 10px;
       }
+
+      .hero-foreground img {
+        max-height: 60vh;
+      }
     }
   </style>
 </head>
@@ -171,11 +214,20 @@
     <a href="/consulting/">Social Media Consulting</a>
   </nav>
 
+  <!-- Hero Section with scrolling background -->
+  <section class="hero-section">
+    <img src="/home-background.jpg" class="hero-background" alt="Scrolling Background" />
+    <div class="hero-foreground">
+      <img src="/home-foreground.png" alt="Keith Foreground" />
+    </div>
+  </section>
+
+  <!-- Info box below the hero -->
   <div class="container">
     <h2>Welcome to My World</h2>
-    <p>I'm Keith — a digital creator passionate about storytelling, self-expression, and building community across platforms. Whether it’s a backflip, a voiceover, or a viral short, I believe in creating content that connects.</p>
-    <p>Take a look around to learn more about me, check out my work, or reach out for collaborations.</p>
-    <p>Let’s make cool things happen 🚀</p>
+    <p>I'm Keith — a digital creator passionate about storytelling, self-expression, and building community across platforms.</p>
+    <p>Whether it’s a backflip, a voiceover, or a viral short, I believe in creating content that connects.</p>
+    <p>Take a look around to explore my work and reach out if you’d like to collaborate.</p>
   </div>
 </body>
 </html>
