@@ -102,31 +102,19 @@
       position: relative;
       height: 100vh;
       overflow: hidden;
+      background-image: url('/home-background.jpg');
+      background-repeat: repeat-x;
+      background-position: top left;
+      background-size: auto 100%;
+      animation: bg-scroll 60s linear infinite;
     }
 
-    .hero-background-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 200%;
-      z-index: 1;
-      overflow: hidden;
-      display: flex;
-      animation: scroll-bg 60s linear infinite;
-    }
-
-    .hero-background-wrapper img {
-      height: 100%;
-      width: auto;
-    }
-
-    @keyframes scroll-bg {
+    @keyframes bg-scroll {
       0% {
-        transform: translateX(0);
+        background-position: 0 0;
       }
       100% {
-        transform: translateX(-50%);
+        background-position: -100% 0;
       }
     }
 
@@ -205,10 +193,6 @@
       .hero-foreground img {
         height: 80vh;
       }
-
-      .hero-background-wrapper {
-        width: 300%;
-      }
     }
   </style>
 </head>
@@ -238,12 +222,8 @@
     <a href="/consulting/">Social Media Consulting</a>
   </nav>
 
-  <!-- Hero Section with improved scrolling and fade-in foreground -->
+  <!-- Hero Section -->
   <section class="hero-section">
-    <div class="hero-background-wrapper">
-      <img src="/home-background.jpg" alt="Scrolling Background" />
-      <img src="/home-background.jpg" alt="Scrolling Background Duplicate" />
-    </div>
     <div class="hero-foreground">
       <img src="/home-foreground.png" alt="Keith Foreground" />
     </div>
