@@ -107,12 +107,12 @@
     .scrolling-background {
       position: absolute;
       top: 0;
-      left: -100%;
+      left: 0;
       height: 100%;
-      width: 200%;
+      width: 400%;
       display: flex;
       z-index: 1;
-      animation: scrollRight 60s linear infinite;
+      animation: scrollLeft 60s linear infinite;
     }
 
     .scrolling-background img {
@@ -121,12 +121,12 @@
       flex-shrink: 0;
     }
 
-    @keyframes scrollRight {
+    @keyframes scrollLeft {
       0% {
-        transform: translateX(0%);
+        transform: translateX(0);
       }
       100% {
-        transform: translateX(50%);
+        transform: translateX(-50%);
       }
     }
 
@@ -234,11 +234,13 @@
     <a href="/consulting/">Social Media Consulting</a>
   </nav>
 
-  <!-- Hero Section with fixed direction -->
+  <!-- Hero Section with scrolling background -->
   <section class="hero-section">
     <div class="scrolling-background">
       <img src="/home-background.jpg" alt="Scrolling Background" />
-      <img src="/home-background.jpg" alt="Scrolling Background Duplicate" />
+      <img src="/home-background.jpg" alt="Scrolling Background" />
+      <img src="/home-background.jpg" alt="Scrolling Background" />
+      <img src="/home-background.jpg" alt="Scrolling Background" />
     </div>
     <div class="hero-foreground">
       <img src="/home-foreground.png" alt="Keith Foreground" />
