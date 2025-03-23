@@ -104,33 +104,41 @@
       overflow: hidden;
     }
 
-    .hero-background {
+    .hero-background-wrapper {
       position: absolute;
       top: 0;
       left: 0;
+      height: 100%;
       width: 100%;
-      height: auto;
+      overflow: hidden;
       z-index: 1;
-      animation: scroll-bg 30s linear infinite;
+    }
+
+    .hero-background {
+      height: 100%;
+      width: auto;
+      animation: scroll-horizontal 40s linear infinite;
+      position: absolute;
     }
 
     .hero-foreground {
       position: relative;
       z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: end;
       height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 5%;
     }
 
     .hero-foreground img {
-      max-height: 90vh;
-      width: auto;
+      height: 120vh;
+      max-width: none;
     }
 
-    @keyframes scroll-bg {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-50%); }
+    @keyframes scroll-horizontal {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     /* Info Section */
@@ -183,7 +191,7 @@
       }
 
       .hero-foreground img {
-        max-height: 60vh;
+        height: 80vh;
       }
     }
   </style>
@@ -214,9 +222,11 @@
     <a href="/consulting/">Social Media Consulting</a>
   </nav>
 
-  <!-- Hero Section with scrolling background -->
+  <!-- Hero Section with horizontal scrolling background -->
   <section class="hero-section">
-    <img src="/home-background.jpg" class="hero-background" alt="Scrolling Background" />
+    <div class="hero-background-wrapper">
+      <img src="/home-background.jpg" class="hero-background" alt="Scrolling Background" />
+    </div>
     <div class="hero-foreground">
       <img src="/home-foreground.png" alt="Keith Foreground" />
     </div>
