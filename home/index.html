@@ -109,16 +109,25 @@
       top: 0;
       left: 0;
       height: 100%;
-      width: 100%;
-      overflow: hidden;
+      width: 200%;
       z-index: 1;
+      overflow: hidden;
+      display: flex;
+      animation: scroll-bg 60s linear infinite;
     }
 
-    .hero-background {
+    .hero-background-wrapper img {
       height: 100%;
       width: auto;
-      animation: scroll-horizontal 40s linear infinite;
-      position: absolute;
+    }
+
+    @keyframes scroll-bg {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .hero-foreground {
@@ -132,13 +141,16 @@
     }
 
     .hero-foreground img {
-      height: 120vh;
+      height: 100vh;
       max-width: none;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
     }
 
-    @keyframes scroll-horizontal {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     /* Info Section */
@@ -193,6 +205,10 @@
       .hero-foreground img {
         height: 80vh;
       }
+
+      .hero-background-wrapper {
+        width: 300%;
+      }
     }
   </style>
 </head>
@@ -222,17 +238,18 @@
     <a href="/consulting/">Social Media Consulting</a>
   </nav>
 
-  <!-- Hero Section with horizontal scrolling background -->
+  <!-- Hero Section with improved scrolling and fade-in foreground -->
   <section class="hero-section">
     <div class="hero-background-wrapper">
-      <img src="/home-background.jpg" class="hero-background" alt="Scrolling Background" />
+      <img src="/home-background.jpg" alt="Scrolling Background" />
+      <img src="/home-background.jpg" alt="Scrolling Background Duplicate" />
     </div>
     <div class="hero-foreground">
       <img src="/home-foreground.png" alt="Keith Foreground" />
     </div>
   </section>
 
-  <!-- Info box below the hero -->
+  <!-- Info box -->
   <div class="container">
     <h2>Welcome to My World</h2>
     <p>I'm Keith — a digital creator passionate about storytelling, self-expression, and building community across platforms.</p>
